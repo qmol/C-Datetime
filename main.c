@@ -45,6 +45,7 @@ int main(int argc, char* argv[]) {
     FILE* output_stream = fopen(argv[2], "w");
     if (!output_stream) {
         printf("Error: Cannot create output file '%s'\n", argv[2]);
+        hash_set_destroy(dt_hset);
         return 1;
     }
 
